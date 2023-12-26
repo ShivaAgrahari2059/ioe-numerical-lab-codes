@@ -1,23 +1,27 @@
- #include<iostream>
-#include<math.h>
+//simple implementation of bisection method using cpp
+
+#include<iostream>
+#include<math.h> 
 
 using namespace std;
-float_t f(float_t x)
+float f(float x)   //functions can be added here
 {
-    float_t value=log(x)-cos(x);
-    return value;
+    return(log(x)-cos(x));
+    //return(exp(x)-3*x);
+    //return(x*sin(x)-1);
+    //return(x*log(x)-1.2);
 }
 int main()
 {
-    float_t a,b,c,e;
-    cout<<"Function is: f(x)= exp(x)-3x"<<endl<<"Enter the range to get solution:"<<endl;
+    float a,b,c,e;
+    cout<<"Enter the range to get solution:"<<endl;
     cin>>a>>b;
     cout<<"Enter error tolrance: ";
     cin>>e;
     cout<<f(a)<<"\n"<<f(b)<<endl;
     for(int i=0;i<100;i++)
     {
-        float_t check=f(a)*f(b);
+        float check=f(a)*f(b);
         if(check<0)
         {
             c=(a+b)/2;
