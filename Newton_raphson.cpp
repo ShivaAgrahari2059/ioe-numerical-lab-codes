@@ -17,6 +17,9 @@ float f(float x)   //functions can be added here
 float f1(float y)
 {
     return (1/y+sin(y));
+    //return(exp(x)-3);
+    //return(x*cos(x)+sin(x);
+    //return(1+log(x));
 }
 
 int main()
